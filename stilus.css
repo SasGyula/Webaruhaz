@@ -1,0 +1,117 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+    
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "n n n n n"
+    "a a a a j"
+    "a a a a j"
+    "f f f f f";
+    gap: 10px;
+}
+body{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background-color:skyblue;
+}
+nav {
+    grid-area: n;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    padding: 5px;
+}
+
+nav li{
+    list-style: none;
+    border: 1px solid rgb(255, 255, 255) ;
+    padding: 5px;
+}
+
+nav a{
+    text-decoration: none;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-area: a;
+    gap: 10px;
+}
+.tartalom {
+    padding: 5px;
+    background-color: white;
+    border-radius: 2px;
+}
+article img {
+    width: 100%;
+    height: 125px;
+}
+article p {
+    text-align: left;
+    padding: 3px;
+}
+.gomb{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.gomb p{
+    text-align: right;
+}
+aside {
+    background-color: white;
+    grid-area: j;
+    padding: 5px;
+    border-radius: 2px;
+}
+aside span{
+    text-align: right;
+}
+aside li{
+    list-style: none;
+    padding: 1px;
+}
+aside #vegosszeg {
+    text-align:center;
+    border-top: 1px solid black;
+    font-weight: bold;
+}
+footer{
+    grid-area: f;
+    text-align: center;
+    background-color: white;
+}
+@media only screen and (max-width: 600px) {
+    main {
+      display: grid;
+      grid-template-areas: 
+      "n n"
+      "j j"
+      "a a"
+      "f f"
+      ;
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+    nav li{
+        border: 1px black solid;
+    }
+    article{
+        display: grid;
+        grid-template-columns: 1fr;  
+    }
+    article img {
+        width: 100%;
+        height: auto;
+    }
+  }
